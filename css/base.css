@@ -1,0 +1,133 @@
+@charset "utf-8";
+
+:root{
+    --herder-color:#EE4D2D;
+    --white-color:#fff;
+    --black-color:#000;
+    --text-color:#333;
+    --border-color:#dbdbdb;
+
+    --header-height:120px;
+    --navbar-height:30px;
+    --header-with-search-height:calc(var(--header-height) - var(--navbar-height));
+}
+
+*{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.grid{
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width{
+    width: 100%;
+}
+
+.grid__row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+/* text */
+
+.grid__column-2{
+    padding-left: 5px;
+    padding-right: 5px;
+    width:16.6667%;
+}
+
+.grid__column-2-4{
+    padding-left: 5px;
+    padding-right: 5px;
+    width:20%;
+}
+
+.grid__column-10{
+    flex-wrap: wrap;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83.3334%;
+}
+
+/* bảng giá */
+
+.home__input{
+    cursor: pointer;
+    position: relative;
+    font-size: 1.4rem;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    position: relative;
+    border: 1px solid var(--border-color);
+    background-color: var(--white-color);
+    top:1px;
+    color: rgba(131, 131, 131);
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home__product-pagination{
+    margin: 48px 0 32px 0;
+}
+
+.pagination__item{
+    margin: 0 12px;
+    text-align: center;
+    --height:30px;
+    list-style:none;
+    min-width: 40px;
+    height: var(--height);
+    line-height: var(--height);
+}
+
+.pagination__item-knot{
+    
+}
+
+.pagination__item-active .pagination__item-link{
+    color: var(--white-color);
+    background-color: var(--herder-color);
+}
+
+.pagination__item-active:hover .pagination__item-link{
+    opacity: 0.9;
+}
+
+.pagination__item-link{
+    display: block;
+    font-size: 2rem;
+    text-decoration:none;
+    color: #939393;
+}
+
+.pagination__item-icon{
+    font-weight: 100;
+}
+
+.footer{
+    padding: 16px 0;
+    border-top: 4px solid var(--herder-color);
+}
